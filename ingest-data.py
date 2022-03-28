@@ -29,7 +29,7 @@ def broadcast_kafka(msg):
 
     if len(bids) > 0 or len(asks) > 0:
         time_now = int(time.time())
-        producer.send(topic_name, json.dumps({"time": time_now, "bids":bids, "asks": asks}).encode())
+        producer.send(topic_name, json.dumps({"time": time_now, "bids":bids, "asks": asks}))
         
 def handle_message(msg):
         broadcast_kafka(msg)
