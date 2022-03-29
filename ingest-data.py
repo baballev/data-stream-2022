@@ -43,12 +43,3 @@ streams = ['btcbusd@depth20@100ms']
 twm = ThreadedWebsocketManager()    
 twm.start()
 depth_stream_name = twm.start_multiplex_socket(callback=handle_message, streams=streams)
-
-
-
-with open("./API_KEY", 'r') as f:
-    API_KEY = f.readline()
-
-
-uri = "wss://stream.binance.com:9443" 
-
