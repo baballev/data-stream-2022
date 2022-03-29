@@ -1,7 +1,6 @@
 import time
 import json
 import urllib.request
-from aiohttp import ThreadedResolver
 from kafka import KafkaProducer
 from binance.client import Client
 from binance import ThreadedWebsocketManager
